@@ -1,0 +1,60 @@
+.filter {
+    outline: 1px solid black;
+
+    &__item {
+        padding: 1rem;
+    }
+
+    &__view {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__category-container {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    &__category-item {
+
+        padding: .8rem 2rem;
+        border-radius: .5rem;
+
+        margin: 1rem 1rem 0 0;
+        font-size: .7rem;
+
+        i {
+            margin-right: .5rem;
+            color: $secondaryColor;
+            font-size: .7rem;
+        }
+
+        &:first-of-type {
+            background-color: $bodyTextColor;
+            color: $bodyBgColor;
+            font-weight: 200;
+        }
+
+        &:nth-of-type(2) {
+            border: 1px solid $borderColor;
+
+        }
+    }
+
+    &__cusine-list {
+        @include reset-list;
+        margin-top: 1rem;
+
+        input {
+            width: 2rem;
+        }
+
+    }
+
+    &__cusine-item {
+        display: flex;
+        justify-content: space-between;
+        @include reset-list;
+    }
+}
