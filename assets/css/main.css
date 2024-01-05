@@ -277,11 +277,66 @@ html {
 html body {
   background-color: #fff;
   color: #1A1A1A;
-  font-family: "Cairo", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
 }
 html body a {
   text-decoration: none;
+  color: #1A1A1A;
 }
 html body input {
   border: none;
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.5rem;
+  border-bottom: 0.8px solid rgb(211, 211, 211);
+}
+.nav__search input {
+  font-size: 1.2rem;
+  padding: 0 5rem 0 1.5rem;
+  font-weight: 300;
+}
+.nav__search input:focus {
+  outline: none;
+}
+.nav__search i {
+  font-size: 1rem;
+  color: rgb(161, 161, 161);
+}
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nav__item {
+  font-size: 0.9rem;
+  margin-left: 3rem;
+}
+.nav__item i {
+  color: #6d8350;
+  background-color: rgba(109, 131, 80, 0.4588235294);
+  padding: 0.6rem;
+  border-radius: 5px;
+  margin-right: 8px;
+  font-size: 0.9rem;
+}
+.nav__item.nav__item--friends i {
+  color: #b26c4d;
+  background-color: rgba(178, 107, 77, 0.4745098039);
 }

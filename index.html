@@ -12,21 +12,20 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <nav class="nav">
+        <form class="nav__search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" id="searchInput" name="search" placeholder="Wyszukaj...">
+            <a href=""><i class="fa-solid fa-circle-xmark"></i></a>
+        </form>
         <ul class="nav__list">
-            <li class="nav__item nav__item--search">
-                <form>
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="search" id="searchInput" name="search" placeholder="Wyszukaj...">
-                    <i class="fa-solid fa-circle-xmark"></i>
-                </form>
+            <li class="nav__item nav__item--friends"><a href=""><i class="fa-solid fa-user-group"></i></i>Friends</a>
             </li>
-            <li class="nav__item"><i class="fa-solid fa-user-group"></i></i>Friends</li>
-            <li class="nav__item"><i class="fa-solid fa-user"></i>Profile</li>
+            <li class="nav__item nav__item"><a href=""><i class="fa-solid fa-user"></i>Profile</a></li>
         </ul>
     </nav>
 </body>
