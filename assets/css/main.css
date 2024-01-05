@@ -269,6 +269,19 @@ summary {
   display: list-item;
 }
 
-a {
+html {
+  scroll-behavior: smooth;
+  font-size: 14px;
+  font-size: clamp(14px, 12.8461538462px + 0.3076923077vw, 16px);
+}
+html body {
+  background-color: #fff;
+  color: #1A1A1A;
+  font-family: "Cairo", sans-serif;
+}
+html body a {
   text-decoration: none;
+}
+html body input {
+  border: none;
 }

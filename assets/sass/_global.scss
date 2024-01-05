@@ -1,3 +1,18 @@
-a {
-	text-decoration: none;
+html {
+    scroll-behavior: smooth;
+    @include fluid-type(375px, 1025px, 14px, 16px);
+
+    body {
+        background-color: $bodyBgColor;
+        color: $bodyTextColor;
+        font-family: $mainFont;
+
+        a {
+            text-decoration: none;
+        }
+
+        input {
+            border: none;
+        }
+    }
 }
