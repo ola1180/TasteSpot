@@ -16,4 +16,12 @@ html {
             border: none;
         }
     }
+
+    .container {
+        margin: 0 auto;
+        width: 100%;
+        @include fluid-max-width(375px, 1140px, 355px, 1100px);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }

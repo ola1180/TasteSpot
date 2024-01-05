@@ -286,6 +286,14 @@ html body a {
 html body input {
   border: none;
 }
+html .container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 355px;
+  max-width: clamp(355px, -10.1960784314px + 97.385620915vw, 1100px);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
 
 .nav {
   position: sticky;
