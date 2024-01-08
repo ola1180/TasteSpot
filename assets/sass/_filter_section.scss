@@ -5,6 +5,7 @@
 
     &__view {
         position: relative;
+        font-size: .7rem;
 
 
 
@@ -59,7 +60,7 @@
         input:checked {
             +label {
                 left: 10px;
-                right: 160px;
+                right: 200px;
                 background-color: $primaryColor;
             }
         }
@@ -76,7 +77,7 @@
             }
 
             +label {
-                left: 160px;
+                left: 200px;
                 right: 10px;
                 background: $secondaryColor;
             }

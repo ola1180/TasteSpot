@@ -362,6 +362,7 @@ html .container {
 }
 .filter__view {
   position: relative;
+  font-size: 0.7rem;
 }
 .filter__view input {
   width: 100%;
@@ -408,7 +409,7 @@ html .container {
 }
 .filter__view input:checked + label {
   left: 10px;
-  right: 160px;
+  right: 200px;
   background-color: #6d8350;
 }
 .filter__view input:not(:checked) {
@@ -421,7 +422,7 @@ html .container {
   color: white;
 }
 .filter__view input:not(:checked) + label {
-  left: 160px;
+  left: 200px;
   right: 10px;
   background: #b26c4d;
 }
