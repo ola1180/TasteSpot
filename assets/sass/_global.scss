@@ -17,16 +17,17 @@ html {
         }
 
         input {
-            border: none;
+            appearance: none;
         }
     }
 
     .container {
-        margin: 0 auto;
+        margin: 2rem auto;
         width: 100%;
+        max-height: 800px;
         @include fluid-max-width(375px, 1140px, 355px, 1100px);
         display: grid;
-        grid-template-columns: .8fr 1fr 1fr;
-        margin: 2rem au;
+        grid-template-columns: .7fr 1fr 1fr;
+
     }
 }
