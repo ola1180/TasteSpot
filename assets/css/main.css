@@ -359,6 +359,10 @@ html .container {
 .filter {
   display: grid;
   gap: 2rem;
+  width: 100%;
+}
+.filter__header {
+  margin-bottom: 1rem;
 }
 .filter__view {
   position: relative;
@@ -409,7 +413,7 @@ html .container {
 }
 .filter__view input:checked + label {
   left: 10px;
-  right: 200px;
+  right: 150px;
   background-color: #6d8350;
 }
 .filter__view input:not(:checked) {
@@ -422,25 +426,23 @@ html .container {
   color: white;
 }
 .filter__view input:not(:checked) + label {
-  left: 200px;
+  left: 150px;
   right: 10px;
   background: #b26c4d;
 }
 .filter__category-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-transition: left 0.5s, right 0.4s 0.2s;
-  transition: left 0.5s, right 0.4s 0.2s;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 .filter__category-item {
+  text-align: center;
   padding: 0.8rem 2rem;
   border-radius: 0.5rem;
-  margin: 1rem 1rem 0 0;
   font-size: 0.7rem;
+  font-weight: bolder;
+  -webkit-transition: scale 0.4s;
+  transition: scale 0.4s;
 }
 .filter__category-item i {
   margin-right: 0.5rem;
@@ -450,19 +452,32 @@ html .container {
 .filter__category-item:first-of-type {
   background-color: #1A1A1A;
   color: #fff;
-  font-weight: 200;
 }
 .filter__category-item:nth-of-type(2) {
   border: 1px solid #d3d2d2;
+}
+.filter__category-item:first-of-type:hover, .filter__category-item:nth-of-type(2):hover {
+  scale: 1.1;
 }
 .filter__cusine-list {
   margin: 0;
   padding: 0;
   list-style: none;
   margin-top: 1rem;
+  height: 95px;
+  overflow: scroll;
+  padding-right: 15px;
 }
 .filter__cusine-list input {
-  width: 2rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d3d2d2;
+  -webkit-transition: background-color 0.4s, color 0.5s;
+  transition: background-color 0.4s, color 0.5s;
+}
+.filter__cusine-list input:checked {
+  border: 3px solid #1A1A1A;
 }
 .filter__cusine-item {
   display: -webkit-box;
@@ -476,20 +491,83 @@ html .container {
   list-style: none;
   margin-bottom: 0.5rem;
 }
+.filter__price .range-slider {
+  width: 300px;
+  margin: auto;
+  position: relative;
+  height: 6rem;
+}
+.filter__price .range-slider input[type=range] {
+  position: absolute;
+}
+.filter__price input[type=number] {
+  border: 1px solid #ddd;
+  font-size: 1.4em;
+  margin-top: 2rem;
+  border-radius: 0.3rem;
+}
+.filter__price input[type=number]:invalid,
+.filter__price input[type=number]:out-of-range {
+  border: 2px solid #ff6347;
+}
+.filter__price input[type=range] {
+  width: 100%;
+}
+.filter__price input[type=range]:focus {
+  outline: none;
+}
+.filter__price input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  background: rgba(109, 131, 80, 0.4588235294);
+}
+.filter__price input[type=range]::-webkit-slider-thumb {
+  z-index: 2;
+  position: relative;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: #b26c4d;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -7px;
+}
 .filter__stars-list {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  width: 100%;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
 }
-.filter__stars-item {
-  border: 1px solid #d3d2d2;
-  border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-  margin-top: 1rem;
+.filter__stars-list input {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  overflow: hidden;
+  margin-right: 0.3rem;
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
+}
+.filter__stars-list input::before {
+  position: absolute;
+  content: "\f005";
+  font-family: fontAwesome;
+  font-size: 1.3rem;
+  color: rgba(178, 107, 77, 0.4745098039);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.filter__stars-list input:hover ~ ::before, .filter__stars-list input:hover::before, .filter__stars-list input:checked ~ ::before, .filter__stars-list input:checked::before {
+  color: rgba(109, 131, 80, 0.4588235294);
 }

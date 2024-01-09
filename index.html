@@ -23,16 +23,16 @@
             <a href=""><i class="fa-solid fa-circle-xmark"></i></a>
         </form>
         <ul class="nav__list">
-            <li class="nav__item nav__item--friends"><a href=""><i class="fa-solid fa-user-group"></i></i>Friends</a>
+            <li class="nav__item nav__item--friends"><a href="" class="nav__link"><i
+                        class="fa-solid fa-user-group"></i></i>Friends</a>
             </li>
-            <li class="nav__item nav__item"><a href=""><i class="fa-solid fa-user"></i>Profile</a></li>
+            <li class="nav__item nav__item"><a href="" class="nav__link"><i class="fa-solid fa-user"></i>Profile</a>
+            </li>
         </ul>
     </nav>
     <div class="container">
         <section class="filter">
-            <h3 class="filter__header">View</h3>
-
-            <span class="filter__view filter__item">
+            <span class="filter__view">
                 <input type="checkbox" id="check" id="switcher">
                 <label for="switcher"></label></span>
 
@@ -54,22 +54,32 @@
             </div>
             <div class="filter__price filter__item">
                 <h3 class="filter__header">Price Range</h3>
-                <div class="filter__price-slider"></div>
+                <div class="range-slider">
+
+                    <input value="25" min="0" max="1000" step="5" type="range" />
+                    <input value="500" min="0" max="1000" step="5" type="range" />
+                    <span class="prices">
+                        <input type="number" value="10" min="0" max="1000" />
+                        <input type="number" value="1000" min="0" max="1000" />
+                    </span>
+                </div>
             </div>
             <div class="filter__stars filter__item">
                 <h3 class="filter__header">Star Rating</h3>
-                <ul class="filter__stars-list">
-                    <li class="filter__stars-item">1-2</li>
-                    <li class="filter__stars-item">3</li>
-                    <li class="filter__stars-item">4</li>
-                    <li class="filter__stars-item">5</li>
-                </ul>
+                <div class="filter__stars-list">
+                    <input type="radio" id="star-5">
+                    <input type="radio" id="star-4">
+                    <input type="radio" id="star-3">
+                    <input type="radio" id="star-2">
+                    <input type="radio" id="star-1">
+                </div>
             </div>
 
         </section>
         <section class="map"></section>
         <section class="result"></section>
     </div>
+    <script src="assets/js/app.js"></script>
 </body>
 
 </html>
